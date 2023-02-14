@@ -4,14 +4,9 @@ from streamlit.elements.image import image_to_url
 
 st.set_page_config(page_title="ChatGPT", page_icon="🤖")
 
-image_url = image_to_url("ying.jpg", width=-3, clamp=False, channels="RGB", output_format="auto", image_id="", allow_emoji=False)
-st.markdown('''
-    <style>
-        .css-fg4pbf {background-image:url(''' + image_url + ''');}
-    </style>
-''', unsafe_allow_html = True)
 
-openai.api_key = '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'
+
+openai.api_key = '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'
 
 def get_response(prompt):
     request = openai.Completion.create(
